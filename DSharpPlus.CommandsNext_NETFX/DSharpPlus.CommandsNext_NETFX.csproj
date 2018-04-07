@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6FF97BA7-82F3-4D0E-8962-68BF827DD2A0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DSharpPlus.CommandsNext_NETFX</RootNamespace>
+    <AssemblyName>DSharpPlus.CommandsNext_NETFX</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60">
+      <HintPath>..\packages\Emzi0767.Microsoft.DependencyInjection.2.0.0\lib\net46\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60">
+      <HintPath>..\packages\Emzi0767.Microsoft.DependencyInjection.Abstractions.2.0.0\lib\net46\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\AliasesAttribute.cs" />
+    <Compile Include="Attributes\CheckBaseAttribute.cs" />
+    <Compile Include="Attributes\CommandAttribute.cs" />
+    <Compile Include="Attributes\CooldownAttribute.cs" />
+    <Compile Include="Attributes\DescriptionAttribute.cs" />
+    <Compile Include="Attributes\DontInjectAttribute.cs" />
+    <Compile Include="Attributes\GroupAttribute.cs" />
+    <Compile Include="Attributes\HiddenAttribute.cs" />
+    <Compile Include="Attributes\ModuleLifespanAttribute.cs" />
+    <Compile Include="Attributes\PriorityAttribute.cs" />
+    <Compile Include="Attributes\RemainingTextAttribute.cs" />
+    <Compile Include="Attributes\RequireBotPermissionsAttribute.cs" />
+    <Compile Include="Attributes\RequireNsfwAttribute.cs" />
+    <Compile Include="Attributes\RequireOwnerAttribute.cs" />
+    <Compile Include="Attributes\RequirePermissionsAttribute.cs" />
+    <Compile Include="Attributes\RequirePrefixesAttribute.cs" />
+    <Compile Include="Attributes\RequireRolesAttribute.cs" />
+    <Compile Include="Attributes\RequireUserPermissionsAttribute.cs" />
+    <Compile Include="BaseCommandModule.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="CommandsNextConfiguration.cs" />
+    <Compile Include="CommandsNextExtension.cs" />
+    <Compile Include="CommandsNextUtilities.cs" />
+    <Compile Include="Converters\ArgumentBindingResult.cs" />
+    <Compile Include="Converters\BaseHelpFormatter.cs" />
+    <Compile Include="Converters\DefaultHelpFormatter.cs" />
+    <Compile Include="Converters\EntityConverters.cs" />
+    <Compile Include="Converters\EnumConverter.cs" />
+    <Compile Include="Converters\HelpFormatterFactory.cs" />
+    <Compile Include="Converters\IArgumentConverter.cs" />
+    <Compile Include="Converters\NullableConverter.cs" />
+    <Compile Include="Converters\NumericConverters.cs" />
+    <Compile Include="Converters\StringConverter.cs" />
+    <Compile Include="Converters\TimeConverters.cs" />
+    <Compile Include="Entities\Builders\CommandBuilder.cs" />
+    <Compile Include="Entities\Builders\CommandGroupBuilder.cs" />
+    <Compile Include="Entities\Builders\CommandModuleBuilder.cs" />
+    <Compile Include="Entities\Builders\CommandOverloadBuilder.cs" />
+    <Compile Include="Entities\Command.cs" />
+    <Compile Include="Entities\CommandArgument.cs" />
+    <Compile Include="Entities\CommandGroup.cs" />
+    <Compile Include="Entities\CommandHelpMessage.cs" />
+    <Compile Include="Entities\CommandModule.cs" />
+    <Compile Include="Entities\CommandOverload.cs" />
+    <Compile Include="Entities\CommandResult.cs" />
+    <Compile Include="EventArgs\CommandContext.cs" />
+    <Compile Include="EventArgs\CommandErrorEventArgs.cs" />
+    <Compile Include="EventArgs\CommandEventArgs.cs" />
+    <Compile Include="EventArgs\CommandExecutionEventArgs.cs" />
+    <Compile Include="Exceptions\ChecksFailedException.cs" />
+    <Compile Include="Exceptions\CommandNotFoundException.cs" />
+    <Compile Include="Exceptions\DuplicateCommandException.cs" />
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="Polyfills.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DSharpPlus_NETFX\DSharpPlus_NETFX.csproj">
+      <Project>{70d31e66-2ca5-4d8f-b01d-e15008990809}</Project>
+      <Name>DSharpPlus_NETFX</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+</Project>

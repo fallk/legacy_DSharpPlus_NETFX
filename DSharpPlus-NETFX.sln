@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSharpPlus_NETFX", "DSharpPlus_NETFX\DSharpPlus_NETFX.csproj", "{70D31E66-2CA5-4D8F-B01D-E15008990809}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSharpPlus.CommandsNext_NETFX", "DSharpPlus.CommandsNext_NETFX\DSharpPlus.CommandsNext_NETFX.csproj", "{6FF97BA7-82F3-4D0E-8962-68BF827DD2A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70D31E66-2CA5-4D8F-B01D-E15008990809}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70D31E66-2CA5-4D8F-B01D-E15008990809}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70D31E66-2CA5-4D8F-B01D-E15008990809}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70D31E66-2CA5-4D8F-B01D-E15008990809}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FF97BA7-82F3-4D0E-8962-68BF827DD2A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FF97BA7-82F3-4D0E-8962-68BF827DD2A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FF97BA7-82F3-4D0E-8962-68BF827DD2A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FF97BA7-82F3-4D0E-8962-68BF827DD2A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

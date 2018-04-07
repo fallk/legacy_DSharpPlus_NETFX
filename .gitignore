@@ -1,0 +1,6 @@
+**/workspace.xml
+**/bin/
+**/obj/
+_DSharpPlus
+packages
+/token.txt

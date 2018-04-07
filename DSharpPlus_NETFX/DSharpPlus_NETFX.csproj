@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{70D31E66-2CA5-4D8F-B01D-E15008990809}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DSharpPlus_NETFX</RootNamespace>
+    <AssemblyName>DSharpPlus_NETFX</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AsyncEvent.cs" />
+    <Compile Include="AsyncManualResetEvent.cs" />
+    <Compile Include="BaseDiscordClient.cs" />
+    <Compile Include="BaseExtension.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="DebugLogger.cs" />
+    <Compile Include="DiscordClient.cs" />
+    <Compile Include="DiscordConfiguration.cs" />
+    <Compile Include="DiscordShardedClient.cs" />
+    <Compile Include="DiscordWebhookClient.cs" />
+    <Compile Include="Entities\DiscordActivity.cs" />
+    <Compile Include="Entities\DiscordApplication.cs" />
+    <Compile Include="Entities\DiscordAttachment.cs" />
+    <Compile Include="Entities\DiscordAuditLogObjects.cs" />
+    <Compile Include="Entities\DiscordBan.cs" />
+    <Compile Include="Entities\DiscordChannel.cs" />
+    <Compile Include="Entities\DiscordColor.Colors.cs" />
+    <Compile Include="Entities\DiscordColor.cs" />
+    <Compile Include="Entities\DiscordConnection.cs" />
+    <Compile Include="Entities\DiscordDmChannel.cs" />
+    <Compile Include="Entities\DiscordEmbed.cs" />
+    <Compile Include="Entities\DiscordEmbedAuthor.cs" />
+    <Compile Include="Entities\DiscordEmbedBuilder.cs" />
+    <Compile Include="Entities\DiscordEmbedField.cs" />
+    <Compile Include="Entities\DiscordEmbedFooter.cs" />
+    <Compile Include="Entities\DiscordEmbedImage.cs" />
+    <Compile Include="Entities\DiscordEmbedProvider.cs" />
+    <Compile Include="Entities\DiscordEmbedThumbnail.cs" />
+    <Compile Include="Entities\DiscordEmbedVideo.cs" />
+    <Compile Include="Entities\DiscordEmoji.cs" />
+    <Compile Include="Entities\DiscordEmoji.EmojiUtils.cs" />
+    <Compile Include="Entities\DiscordGuild.cs" />
+    <Compile Include="Entities\DiscordGuildEmbed.cs" />
+    <Compile Include="Entities\DiscordGuildEmoji.cs" />
+    <Compile Include="Entities\DiscordIntegration.cs" />
+    <Compile Include="Entities\DiscordIntegrationAccount.cs" />
+    <Compile Include="Entities\DiscordInvite.cs" />
+    <Compile Include="Entities\DiscordInviteChannel.cs" />
+    <Compile Include="Entities\DiscordInviteGuild.cs" />
+    <Compile Include="Entities\DiscordMember.cs" />
+    <Compile Include="Entities\DiscordMessage.cs" />
+    <Compile Include="Entities\DiscordOverwrite.cs" />
+    <Compile Include="Entities\DiscordOverwriteBuilder.cs" />
+    <Compile Include="Entities\DiscordPresence.cs" />
+    <Compile Include="Entities\DiscordReaction.cs" />
+    <Compile Include="Entities\DiscordRole.cs" />
+    <Compile Include="Entities\DiscordUser.cs" />
+    <Compile Include="Entities\DiscordVoiceRegion.cs" />
+    <Compile Include="Entities\DiscordVoiceState.cs" />
+    <Compile Include="Entities\DiscordWebhook.cs" />
+    <Compile Include="Entities\Optional.cs" />
+    <Compile Include="Entities\SnowflakeObject.cs" />
+    <Compile Include="Enums\ChannelType.cs" />
+    <Compile Include="Enums\GatewayCompressionLevel.cs" />
+    <Compile Include="Enums\LogLevel.cs" />
+    <Compile Include="Enums\MentionType.cs" />
+    <Compile Include="Enums\OverwriteType.cs" />
+    <Compile Include="Enums\Permission.cs" />
+    <Compile Include="Enums\TokenType.cs" />
+    <Compile Include="EventArgs\ChannelCreateEventArgs.cs" />
+    <Compile Include="EventArgs\ChannelDeleteEventArgs.cs" />
+    <Compile Include="EventArgs\ChannelPinsUpdateEventArgs.cs" />
+    <Compile Include="EventArgs\ChannelUpdateEventArgs.cs" />
+    <Compile Include="EventArgs\ClientErrorEventArgs.cs" />
+    <Compile Include="EventArgs\DiscordEventArgs.cs" />
+    <Compile Include="EventArgs\DMChannelCreateEventArgs.cs" />
+    <Compile Include="EventArgs\DMChannelDeleteEventArgs.cs" />
+    <Compile Include="EventArgs\GuildBanAddEventArgs.cs" />
+    <Compile Include="EventArgs\GuildBanRemoveEventArgs.cs" />
+    <Compile Include="EventArgs\GuildCreateEventArgs.cs" />
+    <Compile Include="EventArgs\GuildDeleteEventArgs.cs" />
+    <Compile Include="EventArgs\GuildEmojisUpdateEventArgs.cs" />
+    <Compile Include="EventArgs\GuildIntegrationsUpdateEventArgs.cs" />
+    <Compile Include="EventArgs\GuildMemberAddEventArgs.cs" />
+    <Compile Include="EventArgs\GuildMemberRemoveEventArgs.cs" />
+    <Compile Include="EventArgs\GuildMembersChunkEventArgs.cs" />
+    <Compile Include="EventArgs\GuildMemberUpdateEventArgs.cs" />
+    <Compile Include="EventArgs\GuildRoleCreateEventArgs.cs" />
+    <Compile Include="EventArgs\GuildRoleDeleteEventArgs.cs" />
+    <Compile Include="EventArgs\GuildRoleUpdateEventArgs.cs" />
+    <Compile Include="EventArgs\GuildUpdateEventArgs.cs" />
+    <Compile Include="EventArgs\HeartBeatEventArgs.cs" />
+    <Compile Include="EventArgs\MessageAcknowledgeEventArgs.cs" />
+    <Compile Include="EventArgs\MessageBulkDeleteEventArgs.cs" />
+    <Compile Include="EventArgs\MessageCreateEventArgs.cs" />
+    <Compile Include="EventArgs\MessageDeleteEventArgs.cs" />
+    <Compile Include="EventArgs\MessageReactionAddEventArgs.cs" />
+    <Compile Include="EventArgs\MessageReactionRemoveEventArgs.cs" />
+    <Compile Include="EventArgs\MessageReactionsClearEventArgs.cs" />
+    <Compile Include="EventArgs\MessageUpdateEventArgs.cs" />
+    <Compile Include="EventArgs\PresenceUpdateEventArgs.cs" />
+    <Compile Include="EventArgs\ReadyEventArgs.cs" />
+    <Compile Include="EventArgs\SocketDisconnectEventArgs.cs" />
+    <Compile Include="EventArgs\TypingStartEventArgs.cs" />
+    <Compile Include="EventArgs\UnknownEventArgs.cs" />
+    <Compile Include="EventArgs\UserSettingsUpdateEventArgs.cs" />
+    <Compile Include="EventArgs\UserSpeakingEventArgs.cs" />
+    <Compile Include="EventArgs\UserUpdateEventArgs.cs" />
+    <Compile Include="EventArgs\VoiceReceiveEventArgs.cs" />
+    <Compile Include="EventArgs\VoiceServerUpdateEventArgs.cs" />
+    <Compile Include="EventArgs\VoiceStateUpdateEventArgs.cs" />
+    <Compile Include="EventArgs\WebhooksUpdateEventArgs.cs" />
+    <Compile Include="EventArgs\WebSocketMessageEventArgs.cs" />
+    <Compile Include="Exceptions\BadRequestException.cs" />
+    <Compile Include="Exceptions\NotFoundException.cs" />
+    <Compile Include="Exceptions\RateLimitException.cs" />
+    <Compile Include="Exceptions\UnauthorizedException.cs" />
+    <Compile Include="Formatter.cs" />
+    <Compile Include="ImageTool.cs" />
+    <Compile Include="Net\Abstractions\AuditLogAbstractions.cs" />
+    <Compile Include="Net\Abstractions\ClientProperties.cs" />
+    <Compile Include="Net\Abstractions\GatewayHello.cs" />
+    <Compile Include="Net\Abstractions\GatewayIdentifyResume.cs" />
+    <Compile Include="Net\Abstractions\GatewayOpCode.cs" />
+    <Compile Include="Net\Abstractions\GatewayPayload.cs" />
+    <Compile Include="Net\Abstractions\IOAuth2Payload.cs" />
+    <Compile Include="Net\Abstractions\ReadyPayload.cs" />
+    <Compile Include="Net\Abstractions\RestChannelPayloads.cs" />
+    <Compile Include="Net\Abstractions\RestEmojiPayloads.cs" />
+    <Compile Include="Net\Abstractions\RestGuildPayloads.cs" />
+    <Compile Include="Net\Abstractions\RestUserPayloads.cs" />
+    <Compile Include="Net\Abstractions\RestWebhookPayloads.cs" />
+    <Compile Include="Net\Abstractions\ShardInfo.cs" />
+    <Compile Include="Net\Abstractions\StatusUpdate.cs" />
+    <Compile Include="Net\Abstractions\TransportActivity.cs" />
+    <Compile Include="Net\Abstractions\TransportMember.cs" />
+    <Compile Include="Net\Abstractions\TransportUser.cs" />
+    <Compile Include="Net\Abstractions\VoiceStateUpdate.cs" />
+    <Compile Include="Net\BaseRestRequest.cs" />
+    <Compile Include="Net\DiscordApiClient.cs" />
+    <Compile Include="Net\Endpoints.cs" />
+    <Compile Include="Net\Models\BaseEditModel.cs" />
+    <Compile Include="Net\Models\ChannelEditModel.cs" />
+    <Compile Include="Net\Models\GuildEditModel.cs" />
+    <Compile Include="Net\Models\MemberEditModel.cs" />
+    <Compile Include="Net\MultipartWebRequest.cs" />
+    <Compile Include="Net\RateLimitBucket.cs" />
+    <Compile Include="Net\RestClient.cs" />
+    <Compile Include="Net\RestRequest.cs" />
+    <Compile Include="Net\RestRequestMethod.cs" />
+    <Compile Include="Net\RestResponse.cs" />
+    <Compile Include="Net\Serialization\DiscordJson.cs" />
+    <Compile Include="Net\Udp\BaseUdpClient.cs" />
+    <Compile Include="Net\Udp\ConnectionEndpoint.cs" />
+    <Compile Include="Net\Udp\DspUdpClient.cs" />
+    <Compile Include="Net\Udp\IpEndpoint.cs" />
+    <Compile Include="Net\WebSocket\BaseWebSocketClient.cs" />
+    <Compile Include="Net\WebSocket\WebSocketClient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RingBuffer.cs" />
+    <Compile Include="Utilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+</Project>
