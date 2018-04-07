@@ -138,27 +138,24 @@ namespace DSharpPlus
             return false;
         }
 
-        public bool TryGet2(Func<T, bool> predicate, out TheValue<T> item)
+        public TheValue<T> TryGet2(Func<T, bool> predicate)
         {
             for (var i = this.CurrentIndex; i < this.InternalBuffer.Length; i++)
             {
                 if (this.InternalBuffer[i] != null && predicate(this.InternalBuffer[i]))
                 {
-                    item = new TheValue<T>(this.InternalBuffer[i], this.ExBuffer[i]);
-                    return true;
+                    return new TheValue<T>(this.InternalBuffer[i], this.ExBuffer[i]);
                 }
             }
             for (var i = 0; i < this.CurrentIndex; i++)
             {
                 if (this.InternalBuffer[i] != null && predicate(this.InternalBuffer[i]))
                 {
-                    item = new TheValue<T>(this.InternalBuffer[i], this.ExBuffer[i]);
-                    return true;
+                    return new TheValue<T>(this.InternalBuffer[i], this.ExBuffer[i]);
                 }
             }
 
-            item = new TheValue<T>(default, null);
-            return false;
+            return null;
         }
 
         /// <summary>
@@ -265,8 +262,8 @@ namespace DSharpPlus
 
     public class TheValue<T>
     {
-        public T Item1;
-        public Exception Item2;
+        public readonly T Item1;
+        public readonly Exception Item2;
 
         public TheValue(T item1, Exception item2)
         {

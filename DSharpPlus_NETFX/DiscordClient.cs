@@ -1627,8 +1627,8 @@ namespace DSharpPlus
             var event_message = message;
 
             DiscordMessage oldmsg = null;
-            TheValue<DiscordMessage> v = default;
-            if (this.Configuration.MessageCacheSize > 0 && !this.MessageCache.TryGet2(xm => xm.Id == event_message.Id && xm.ChannelId == event_message.ChannelId, out v))
+            TheValue<DiscordMessage> v = null;
+            if (this.Configuration.MessageCacheSize > 0 && (v = this.MessageCache.TryGet2(xm => xm.Id == event_message.Id && xm.ChannelId == event_message.ChannelId)) == null)
             {
                 // no need with tryget2
                 //message = event_message;
@@ -1663,6 +1663,10 @@ namespace DSharpPlus
             }
             else
             {
+                if (v == null)
+                {
+                    DebugLogger.LogMessage(LogLevel.Warning, "Bap", "V is null this is bad", DateTime.Now);
+                }
                 message = v.Item1;
                 oldmsg = new DiscordMessage(message, v.Item2);
 
